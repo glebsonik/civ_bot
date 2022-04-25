@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root to: "welcome_users#index"
-  get 'welcome_users/index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: "welcome_users#show"
+
+  resource :welcome_users, only: [:show]
+
+  post 'create_message', to: 'welcome_users#create_message', as: :create_message
+
 end
