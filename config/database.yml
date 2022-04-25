@@ -49,6 +49,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-#  adapter: mysql2
-#  encoding: utf8mb4
-  url: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  database: heroku_9ebf8b6141c264d
+  username: b3d67c4941121b
+  password: <%= ENV['CIV_BOT_DATABASE_PASSWORD'] %>
