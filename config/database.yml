@@ -48,10 +48,12 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
+#production:
+#  <<: *default
 #  encoding: utf8mb4_unicode_ci
-  database: heroku_9ebf8b6141c264d
-  username: b3d67c4941121b
-  host: <%= ENV['MY_DB_URL_CUSTOM'] %>
-  password: <%= ENV['CIV_BOT_DATABASE_PASSWORD'] %>
+#  database: heroku_9ebf8b6141c264d
+#  username: b3d67c4941121b
+#  host: <%= ENV['MY_DB_URL_CUSTOM'] %>
+#  password: <%= ENV['CIV_BOT_DATABASE_PASSWORD'] %>
+production:
+  url: <%= ENV['DATABASE_URL'] %>
