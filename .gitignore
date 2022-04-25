@@ -45,3 +45,4 @@ yarn-debug.log*
 /httpRequests/
 .idea
 civ_bot.iml
+/config/credentials/production.key
