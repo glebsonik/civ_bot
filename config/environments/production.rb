@@ -93,6 +93,8 @@ Rails.application.configure do
 
   routes.default_url_options = {host: 'agile-mesa-04612.herokuapp.com', protocol: 'https'}
 
+  config.telegram_updates_controller.session_store = :file_store, Rails.root.join('tmp', 'session_store')
+
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write
