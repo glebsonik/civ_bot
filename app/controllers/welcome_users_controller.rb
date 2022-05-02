@@ -17,7 +17,7 @@ class WelcomeUsersController < ApplicationController
     p response
 
     respond_to do |format|
-      format.json  { render json: params.to_json }
+      format.json { render json: params.to_json }
       format.html { redirect_to :show }
     end
   end
