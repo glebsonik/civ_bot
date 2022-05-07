@@ -3,7 +3,7 @@ class GameHookController < ApplicationController
 
   def create_message
     user = User.find_by(steam_name: params["value2"])
-    return render(json: NO_USERS_ASCII.split("\n")) unless user
+    return render(json: NO_USERS_ASCII.split("\n")) unless user && !user.silent_mode
 
     payload = {
       chat_id: Encryptor::Encryptor.decrypt(user.chat_name),
