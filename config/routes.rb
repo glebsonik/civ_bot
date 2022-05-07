@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'game_hook/create_message'
   root to: "welcome_users#show"
 
   resource :welcome_users, only: [:show]
